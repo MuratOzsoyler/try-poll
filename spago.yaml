@@ -1,0 +1,64 @@
+package:
+  dependencies:
+    - aff
+    - console
+    - debug
+    - deku
+    - deku-core
+    - deku-dom
+    - effect
+    - hyrule
+    - prelude
+    - routing
+    - routing-duplex
+  name: try-poll
+  test:
+    dependencies: []
+    main: Test.Main
+workspace:
+  extra_packages:
+    hyrule:
+      git: "https://github.com/mikesol/purescript-hyrule.git"
+      ref: "f388528a9aaa25a5307bf67f6ed12d2097620929"
+      dependencies:
+        - effect
+        - filterable
+        - js-timers
+        - unsafe-reference
+        - web-html
+        - web-uievents
+    bolson:
+      git: "https://github.com/mikesol/purescript-bolson.git"
+      ref: "d87900ceedfb81814bd282be464fa4c8a55677c2"
+      dependencies:
+        - fast-vect
+        - foreign-object
+        - hyrule
+        - record
+    deku:
+      git: "https://github.com/mikesol/purescript-deku.git"
+      subdir: deku
+      ref: "22d4756f831ac57c17286bae86a5799a0377239a"
+      dependencies:
+        - bolson
+        - record
+    deku-core:
+      git: "https://github.com/mikesol/purescript-deku.git"
+      subdir: deku-core
+      ref: "22d4756f831ac57c17286bae86a5799a0377239a"
+      dependencies:
+        - bolson
+        - catenable-lists
+        - foreign-object
+        - record
+        - stringutils
+    deku-dom:
+      git: "https://github.com/mikesol/purescript-deku.git"
+      subdir: deku-dom
+      ref: "22d4756f831ac57c17286bae86a5799a0377239a"
+      dependencies:
+        - bolson
+        - web-pointerevents
+        - web-touchevents
+  package_set:
+    registry: 38.0.0
